@@ -1,0 +1,24 @@
+{
+  "name": "amoCRM",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vseriousv/amoCRM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vseriousv/amoCRM/issues"
+  },
+  "homepage": "https://github.com/vseriousv/amoCRM#readme",
+  "dependencies": {
+    "amocrm-js": "^1.0.17",
+    "aws-sdk": "^2.532.0"
+  }
+}
