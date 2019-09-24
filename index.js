@@ -1,5 +1,6 @@
 const AmoCRM = require( 'amocrm-js' );
 var AWS = require("aws-sdk");
+require('dotenv').config();
 
 AWS.config.update({region: 'eu-central-1'});
 
@@ -12,7 +13,7 @@ const getDataDynamoDB = new Promise((resolve, reject) => {
 });
 
 const crm = new AmoCRM({
-    domain: 'acrylnod', 
+    domain: process.env.domain, 
     auth: {
         login: process.env.auth_login,
         hash: process.env.auth_hash
@@ -87,6 +88,14 @@ const addCRM =  data => {
                                 name: "countMiners",
                                 values: [{ 
                                     value: data.countMiners
+                                }],
+                                is_system: false
+                            },
+                            {
+                                id: 664381,
+                                name: "referal",
+                                values: [{ 
+                                    value: data.referal
                                 }],
                                 is_system: false
                             },
