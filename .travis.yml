@@ -8,7 +8,7 @@ install:
   - npm install
 deploy:
   - provider: lambda
-    function_name: "setDatabaseClients"
+    function_name: "setToCRM"
     region: eu-central-1
     role: "arn:aws:iam::822356963695:role/LambdaDynamoDBRole"
     runtime: "nodejs10.x"
