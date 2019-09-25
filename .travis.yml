@@ -9,7 +9,7 @@ install:
 deploy:
   - provider: lambda
     function_name: "setToCRM"
-    region: eu-central-1
+    region: "eu-central-1"
     role: "arn:aws:iam::822356963695:role/LambdaDynamoDBRole"
     runtime: "nodejs10.x"
     handler_name: "handler"
@@ -17,5 +17,5 @@ deploy:
     secret_access_key: $AWS_SECRET_ACCESS_KEY
     on:
       branch: master
-    memory_size: "2048"
-    timeout: "20"
+    memory_size: 2048
+    timeout: 20
